@@ -1,0 +1,79 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2018-04-27T13:19:46.058Z",
+    "end": "2018-04-27T13:19:46.159Z",
+    "duration": 101,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "c6c9f9e6-5349-41bf-aee6-b50f6f5090c2",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "2e4f4fc1-5a01-46fa-aefe-09c82e5018a8",
+        "title": "测试接口路由",
+        "fullFile": "/home/wy/study/praise3/test/server.js",
+        "file": "/test/server.js",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "点赞",
+            "fullTitle": "测试接口路由 点赞",
+            "timedOut": false,
+            "duration": 92,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "request().get('/index/update').expect(200).end(function (err, res) {\n    if (res.data == 1) return done(err);\n    done();\n});",
+            "err": {},
+            "isRoot": false,
+            "uuid": "e1346fe4-d97c-476d-ae1e-1ffcec57fa66",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "e1346fe4-d97c-476d-ae1e-1ffcec57fa66"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 92,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2018
+}
