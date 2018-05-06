@@ -1,11 +1,13 @@
-var webdriver = require('selenium-webdriver'),
-    By = webdriver.By,
-    until = webdriver.until;
+const {Builder, By, Key, until} = require('selenium-webdriver');
 
-var driver = new webdriver.Builder()
-    .forBrowser('firefox')
-    .build();
-
-driver.get('http://localhost:3000/index/index'); 
-driver.findElement(By.id('praise-box')).click();
-driver.quit();
+(async function example() {
+  let driver = await new Builder().forBrowser('firefox').build();
+  try {
+    await driver.get('http://localhost:3000/index/index');
+    await driver.findElement(By.id('praise-box')).click();
+    const _animation = driver.findElement(By.id('animation'));
+    await driver.wait(_animation.isDisplayed(), 10000);
+  } finally {
+    await driver.quit();
+  }
+})();

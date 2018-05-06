@@ -11,8 +11,10 @@ describe('测试接口路由', function() {
         request()
             .get('/index/update')
             .expect(200)
+            // 如果使用.end()方法，失败的.expect()断言若将不会抛出
+            // 它们会以一个error的形式返回断言到.end()的callback
             .end(function(err, res) {
-                if (res.data == 1) return done(err);
+                if(err) return done(err);
                 done();
             })
     });

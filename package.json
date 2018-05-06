@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "unitTest": "karma start",
     "serverTest": "node mochaRunner.js",
-    "e2eTest": "node ./test/e2e.js",
+    "e2eTest": "node ./src/test/e2e.js",
     "webpackdev": "better-npm-run webpack:dev",
     "webpackprod": "better-npm-run webpack:prod",
     "webpackwatch": "webpack -w"

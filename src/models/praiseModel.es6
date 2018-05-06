@@ -19,7 +19,7 @@ class praiseModel{
                 } else {
                     reject({});
                 }
-                console.log(info);
+                console.log('info',info);
             })
         })
     }

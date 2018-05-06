@@ -5,9 +5,9 @@ const mocha = new Mocha({
 });
 
 // 要测试的文件
-mocha.addFile("./test/server.js");
+mocha.addFile("./build/test/server.js");
 
 mocha.run(function() {
-    console.log("done");
+    console.log("接口测试完成");
     process.exit();
-})
+});
