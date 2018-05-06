@@ -1,6 +1,6 @@
-import PraiseButton from './PraiseButton.es6';
+import PraiseButton from "./PraiseButton.es6";
 const p = new PraiseButton();
-let t = '';
+let t = "";
 
 xtag.register("x-praise", {
   content:
@@ -12,15 +12,20 @@ xtag.register("x-praise", {
     '<div class="finger two"></div>' +
     '<div class="finger three"></div>' +
     '<div class="finger four"></div>' +
-    "</div>",
+    "</div>" +
+    "<span class='hide' id='animation'>+1</span>",
 
-  lifecycle: {
+  lifecycle: {},
 
-  },
- 
   methods: {
     praise: function() {
+      let self = this;
       p.handlePraise();
+      let animation = self.querySelector("#animation");
+      animation.className = "hide num";
+      setTimeout(function() {
+        animation.className = "hide";
+      }, 800);
     }
   },
 
@@ -28,9 +33,8 @@ xtag.register("x-praise", {
     click: function(e) {
       let self = this;
       let target = e.target;
-      console.log(e.currentTarget);
-      if(target.parentNode.id == 'praise-box' || target.id == 'praise-box') {
-        if(t) {
+      if (target.parentNode.id == "praise-box" || target.id == "praise-box") {
+        if (t) {
           clearTimeout(t);
         }
         t = setTimeout(() => {
